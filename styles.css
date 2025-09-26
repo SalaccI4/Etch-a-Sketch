@@ -23,9 +23,8 @@ button{
 }
 
 .boxes{
-    background-color:rgba(230, 230, 236, 1);
+    background-color:rgba(230, 230, 236);
     width: 30px;
     height: 30px;
     box-shadow: 0 0 0 1px rgb(0, 0, 0) inset;
-    opacity: 1;
 }

@@ -26,7 +26,11 @@ contain.addEventListener("mouseover", function (e) {
         const r = Math.floor(Math.random() * 256)
         const g = Math.floor(Math.random() * 256)
         const b = Math.floor(Math.random() * 256)
-        e.target.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 1)`
+        e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
         e.target.classList.add("colored")
+        e.target.style.opacity = "1"
+    }
+    if (e.target.classList.contains("colored") && e.target.style.opacity > 0){
+        e.target.style.opacity -= `${0.1}`
     }
 })
