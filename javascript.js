@@ -1,13 +1,25 @@
 let box
 
 const contain = document.querySelector(".container")
+const btn = document.querySelector("button")
 
+btn.addEventListener("click", () => {
 
-for (let i = 0; i < 256; i++){
-    box = document.createElement("div")
-    box.classList.add("boxes")
-    contain.appendChild(box)
-}
+    while (contain.firstChild){
+        contain.removeChild(contain.firstChild)
+    }
+
+    const hWidth = prompt("Enter your desired number of squares for the width (Max: 100)")
+    const hHeight = prompt("Enter your desired number of squares for the length (Max: 100)")
+    contain.style.width = `${hWidth * 30}px`
+    contain.style.height = `${hHeight * 30}px`
+
+    for (let i = 0; i < hWidth * hHeight; i++) {
+        box = document.createElement("div")
+        box.classList.add("boxes")
+        contain.appendChild(box)
+    }
+})
 
 contain.addEventListener("mouseover", function (e) {
     const r = Math.floor(Math.random() * 256)
