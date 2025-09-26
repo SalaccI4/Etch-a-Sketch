@@ -23,12 +23,9 @@ button{
 }
 
 .boxes{
-    background-color:rgb(230, 230, 236);
+    background-color:rgba(230, 230, 236, 1);
     width: 30px;
     height: 30px;
     box-shadow: 0 0 0 1px rgb(0, 0, 0) inset;
-}
-
-.hover{
-    background-color:rgb(160, 174, 185)
+    opacity: 1;
 }
